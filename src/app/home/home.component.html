@@ -1,0 +1,77 @@
+<h1>Get images of different dog breeds</h1>
+
+<p>Breeds:</p>
+
+<!-- A-E F-L, M-S and T-Z -->
+<div class="containerHome">
+  <form class="containerHomeForm" #breedsForm="ngForm">
+    <mat-select
+      class="select"
+      placeholder="A - E"
+      [ngModel]="selectAE"
+      (click)="breedsForm.reset()"
+      (ngModelChange)="breedSelected($event)"
+      name="selAE"
+    >
+      <mat-option *ngFor="let breed of breedsAE" [value]="breed">
+        {{ breed }}
+      </mat-option>
+    </mat-select>
+
+    <mat-select
+      class="select"
+      placeholder="F - L"
+      [ngModel]="selectFL"
+      (click)="breedsForm.reset()"
+      (ngModelChange)="breedSelected($event)"
+      name="selFL"
+    >
+      <mat-option *ngFor="let breed of breedsFL" [value]="breed">
+        {{ breed }}
+      </mat-option>
+    </mat-select>
+    <mat-select
+      class="select"
+      placeholder="M - S"
+      [ngModel]="selectMS"
+      (click)="breedsForm.reset()"
+      (ngModelChange)="breedSelected($event)"
+      name="selMS"
+    >
+      <mat-option *ngFor="let breed of breedsMS" [value]="breed">
+        {{ breed }}
+      </mat-option>
+    </mat-select>
+    <mat-select
+      class="select"
+      placeholder="T - Z"
+      [ngModel]="selectTZ"
+      (click)="breedsForm.reset()"
+      (ngModelChange)="breedSelected($event)"
+      name="selTZ"
+    >
+      <mat-option *ngFor="let breed of breedsTZ" [value]="breed">
+        {{ breed }}
+      </mat-option>
+    </mat-select>
+  </form>
+</div>
+
+<h2>Selected breed: {{ selectedBreed }}</h2>
+
+<div *ngIf="subBreeds?.length > 0">
+  <h3>Sub-breeds:</h3>
+  <div class="subbreed">
+    <div class="subbreedItem" *ngFor="let subBreed of subBreeds">
+      {{ subBreed }}
+    </div>
+  </div>
+  <br />
+  <br />
+</div>
+
+<button *ngIf="selectedBreed" class="button" mat-button (click)="getNewImage()">
+  Get new image
+</button>
+<br />
+<img class="dogImage" *ngIf="randomDog" [src]="randomDog.message" />

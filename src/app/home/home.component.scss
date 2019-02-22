@@ -1,0 +1,58 @@
+.containerHome {
+  display: flex;
+}
+
+.containerHomeForm {
+  display: flex;
+  flex: 1;
+}
+
+.select {
+  flex: 1;
+  margin-right: 30px;
+  text-align-last: center;
+  border: 1px dashed grey;
+  border-radius: 5px;
+}
+
+.button {
+  margin-bottom: 10px;
+  background-color: #424242;
+}
+
+.dogImage {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 10px;
+}
+
+.dogImage:hover {
+  cursor: pointer;
+}
+
+.subbreed {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.subbreedItem {
+  margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+  .containerHomeForm {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .select {
+    flex: 1;
+    margin-bottom: 10px;
+    text-align-last: center;
+    border: 1px dashed grey;
+    border-radius: 5px;
+  }
+}
