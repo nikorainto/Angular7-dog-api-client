@@ -20,12 +20,22 @@ header {
           padding: 1.5em;
           text-transform: uppercase;
           font-size: 0.8em;
-
+          @media (max-width: 340px) {
+            padding: 1em;
+          }
           &:hover {
             background: #26a69a;
           }
         }
       }
     }
+  }
+}
+
+@media (max-width: 340px) {
+  .container {
+    width: 90%;
+    padding: 1.3em 1.3em;
+    margin: 0;
   }
 }

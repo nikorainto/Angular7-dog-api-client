@@ -57,7 +57,7 @@
   </form>
 </div>
 
-<h2>Selected breed: {{ selectedBreed }}</h2>
+<h2 *ngIf="selectedBreed">Selected breed: {{ selectedBreed }}</h2>
 
 <div *ngIf="subBreeds?.length > 0">
   <h3>Sub-breeds:</h3>

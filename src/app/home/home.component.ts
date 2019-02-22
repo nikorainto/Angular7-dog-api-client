@@ -21,12 +21,6 @@ export class HomeComponent implements OnInit {
   constructor(private api: ApiService) {}
 
   ngOnInit() {
-    /*
-    this.api.getRandom().subscribe(data => {
-      this.randomDog = data;
-    });
-    */
-
     this.api.getAllBreeds().subscribe(data => {
       if (data['status'] === 'success') {
         this.allBreeds = data['message'];

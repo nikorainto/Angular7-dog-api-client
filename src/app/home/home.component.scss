@@ -38,7 +38,13 @@
 }
 
 .subbreedItem {
-  margin-right: 5px;
+  margin: 5px;
+  padding: 3px 30px;
+  width: 120px;
+  border: 1px dashed grey;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
 }
 
 @media (max-width: 767px) {

@@ -44,3 +44,11 @@ section {
 .mat-select-trigger {
   padding: 14px;
 }
+
+@media (max-width: 767px) {
+  body,
+  html {
+    overflow: hidden;
+    width: 100%;
+  }
+}
